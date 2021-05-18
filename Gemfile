@@ -27,6 +27,7 @@ gem 'devise'
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 gem 'sassc-rails', '>= 2.1.0'
 gem 'jquery-rails'
+gem 'simple_form', '~> 5.1'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 

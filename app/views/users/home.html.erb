@@ -1,3 +1,4 @@
 <h1>Welcome!</h1>
 <%= current_user.email%>
 <%= button_to "logout", destroy_user_session_path,class:'btn btn-danger',  method: :delete  %>
+<%= link_to "Create a charity", new_charity_path,class:'btn btn-primary'  %>
