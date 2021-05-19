@@ -1,0 +1,24 @@
+<ul class="nav">
+    <%if !user_signed_in?%>
+
+    <li class="nav-item">
+        <%= link_to "Login", user_session_path %>
+    </li>
+    <li class="nav-item">
+        <%= link_to "Signup", new_user_registration_path %>
+    </li>
+
+    <%else%>
+    <li class="nav-item">
+        <%= button_to "Logout", destroy_user_session_path , class:'btn btn-danger'%>
+    </li>
+    <li class="nav-item">
+        <%= link_to "Create a charity", new_charity_path %>
+    </li>
+    <li class="nav-item">
+        <%= link_to "All charities", charities_path %>
+    </li>
+
+    <%end%>
+
+</ul>

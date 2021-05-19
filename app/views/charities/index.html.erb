@@ -1,0 +1,8 @@
+<h1>All charities</h1>
+
+<% @charities.each do |charity|%>
+<h1><%=charity.name %></h1>
+<h1><%=charity.content %></h1>
+<h1>Created by: <%=charity.user.email %></h1>
+
+<%end%>

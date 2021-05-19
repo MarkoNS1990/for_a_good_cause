@@ -1,4 +1,9 @@
-<h1>Welcome!</h1>
-<%= current_user.email%>
+<h1>Welcome to For A Good Cause</h1>
+<p>In here you can create a charity of your choice, donate to one, or just show your support!</p>
+
+<% if !current_user%>
+<p class='notice'>Please login or signup to continue</p>
+<%end%>
+
 <%= button_to "logout", destroy_user_session_path,class:'btn btn-danger',  method: :delete  %>
 <%= link_to "Create a charity", new_charity_path,class:'btn btn-primary'  %>
