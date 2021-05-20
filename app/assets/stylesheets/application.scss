@@ -27,6 +27,17 @@ ul {
   list-style-type: none;
   padding: 0;
 }
+a:hover {
+  background-color: #5fb523 !important;
+}
+
+.my-btn {
+  background-color: #5fb523;
+  opacity: 0.9;
+  letter-spacing: 5px;
+  font-weight: bold;
+  font-size: 17px;
+}
 // Navbar
 .navbar-link {
   background-color: #fff;
