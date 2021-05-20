@@ -18,6 +18,9 @@ class CharitiesController < ApplicationController
         end
     end
 
+    def show
+        @charities = Charity.where(user_id:current_user.id)
+    end
     
 
     private

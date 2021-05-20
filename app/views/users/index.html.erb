@@ -8,7 +8,7 @@
 
     <ol>
         <% @users.each do |user|%>
-        <li><%=user.email%><%= link_to "show", "users/#{user.id}}", class:'btn btn-info btn-sm' %>
+        <li><%=user.email%><%= link_to "show charity logs", "users/#{user.id}}", class:'btn btn-info btn-sm' %>
         </li>
         <%end%>
     </ol>

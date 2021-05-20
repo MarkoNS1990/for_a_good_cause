@@ -21,7 +21,7 @@
         <%= link_to "All charities", charities_path , class:'btn btn-primary' %>
     </li>
     <li class="nav-item">
-        <%= link_to "My charities", charities_path , class:'btn btn-primary' %>
+        <%= link_to "My charities", "charities/#{current_user.id}" , class:'btn btn-primary' %>
     </li>
     <li class="nav-item">
         <%= link_to "My donations", charities_path , class:'btn btn-primary' %>

@@ -1,0 +1,17 @@
+<div class='heading'>
+    <%= link_to root_path do %>
+    <i class="fas fa-chevron-circle-left"></i>
+    <% end %>
+    <h1 class='text-center'>List of My Charities </h1>
+</div>
+<%if @charities.count > 1 %>
+<h3>You have made <%=@charities.count%> charities</h3>
+<%elsif @charities.count == 1 %>
+<h3>You have made <%=@charities.count%> charity</h3>
+<%else%>
+<h3 class='text-light'>You have no charities so far! Go ahead and make one!</h3>
+<%end%>
+
+<%@charities.each do |char|%>
+<%=char.name%>
+<%end%>
