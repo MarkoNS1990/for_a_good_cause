@@ -1,0 +1,12 @@
+<div class='heading'>
+    <%= link_to root_path do %>
+    <i class="fas fa-chevron-circle-left"></i>
+    <% end %>
+    <h1 class='text-center'>Charities made by: <%=@user.email%></h1>
+</div>
+
+<ol>
+    <%@charities.each do |char|%>
+    <li><%=char.name%></li>
+    <%end%>
+</ol>

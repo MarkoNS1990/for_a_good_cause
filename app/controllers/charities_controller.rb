@@ -18,6 +18,8 @@ class CharitiesController < ApplicationController
         end
     end
 
+    
+
     private
 
     def charity_params
