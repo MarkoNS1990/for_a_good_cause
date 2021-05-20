@@ -103,6 +103,11 @@ a:hover {
     .card-body {
       background-color: #fff;
       padding: 10px 0;
+      .card-title {
+        text-decoration: underline;
+        font-style: italic;
+        font-size: 16px;
+      }
     }
   }
 }
