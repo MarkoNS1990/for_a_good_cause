@@ -1,6 +1,7 @@
 class CharitiesController < ApplicationController
     def index
         @charities = Charity.all.order("created_at DESC")
+        @user = current_user
     end
 
     def new
@@ -20,6 +21,13 @@ class CharitiesController < ApplicationController
 
     def show
         @charities = Charity.where(user_id:current_user.id)
+    end
+
+    def destroy
+        @charity = Charity.find(params[:id])
+        @charity.destroy
+
+        redirect_to charities_path
     end
     
 

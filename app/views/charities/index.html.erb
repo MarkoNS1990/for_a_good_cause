@@ -14,6 +14,9 @@
         <div class="card text-center">
             <div class="card-header">
                 Name of the charity: <%=charity.name %>
+                <% if current_user.id == charity.user_id %>
+                <%= button_to "delete", "charities/#{charity.id}" ,class:'btn btn-danger', method: :delete %>
+                <%end%>
             </div>
             <div class="card-body">
                 <h5 class="card-title">Created by: <%=charity.user.email %></h5>
