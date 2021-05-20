@@ -16,11 +16,11 @@
                 Name of the charity: <%=charity.name %>
                 <% if current_user.id == charity.user_id %>
 
-                <%= link_to "charities/#{charity.id}/edit" ,class:'btn btn-primary' do %>
+                <%= link_to edit_charity_path(charity) ,class:'btn btn-primary' do %>
                 <i class="fas fa-pencil-alt"></i>
                 <%end%>
 
-                <%= button_to "delete", "charities/#{charity.id}" ,class:'btn btn-danger', data: { confirm: "Are you sure?"}, method: :delete %>
+                <%= button_to "delete", charity_path(charity) ,class:'btn btn-danger', data: { confirm: "Are you sure?"}, method: :delete %>
                 <%end%>
             </div>
             <div class="card-body">
