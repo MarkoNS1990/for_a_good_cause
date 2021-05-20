@@ -19,6 +19,7 @@
                 <%= link_to edit_charity_path(charity) ,class:'btn btn-primary' do %>
                 <i class="fas fa-pencil-alt"></i>
                 <%end%>
+                <%= link_to "edit", edit_charity_path(charity) %>
 
                 <%= button_to "delete", charity_path(charity) ,class:'btn btn-danger', data: { confirm: "Are you sure?"}, method: :delete %>
                 <%end%>
