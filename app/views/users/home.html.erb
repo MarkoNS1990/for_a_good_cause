@@ -1,8 +1,10 @@
 <div class="container text-center home mt-3">
+    <p class="notice text-center"><%= notice %></p>
+    <p class="alert text-center"><%= alert %></p>
     <hr class='my-4 my-hr'>
     <h1 class='display-2'>Welcome to <br>For A Good Cause</h1>
     <hr class='my-4 my-hr'>
-    <p class='lead'>In here you can create a charity of your choice, donate to one, or just show your support!</p>
+    <p class='lead'>In here you can create a charity of your choice, donate $1 to it, or just show your support!</p>
 
     <% if !current_user%>
     <p class='notice'>Start by logging in or signing up!</p>

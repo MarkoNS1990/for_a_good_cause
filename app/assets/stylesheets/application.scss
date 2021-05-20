@@ -57,6 +57,18 @@ body {
 
 // cards
 
+.heading {
+  display: flex;
+
+  align-items: center;
+
+  .fas {
+    font-size: 40px;
+    color: #5fb523;
+    margin-right: 20px;
+  }
+}
+
 .cards-container {
   color: #434b54;
   .card {

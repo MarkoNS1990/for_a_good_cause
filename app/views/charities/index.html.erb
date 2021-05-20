@@ -1,18 +1,25 @@
 <div class="container-fluid">
-    <h1 class='text-center'>All charities</h1>
+    <div class='heading'>
+        <%= link_to root_path do %>
+        <i class="fas fa-chevron-circle-left"></i>
+        <% end %>
+        <h1 class='text-center'>All charities</h1>
+    </div>
+
+
     <div class='cards-container'>
         <% @charities.each do |charity|%>
 
         <div class="card text-center">
             <div class="card-header">
-                <%=charity.name %>
+                Name of the charity: <%=charity.name %>
             </div>
             <div class="card-body">
                 <h5 class="card-title">Created by: <%=charity.user.email %></h5>
                 <p class="card-text"><%=charity.content %></p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <%= donate_btn(charity) %>
             </div>
-            <div class="card-footer text-muted">
+            <div class="card-footer">
                 <%=charity.created_at %>
             </div>
         </div>
