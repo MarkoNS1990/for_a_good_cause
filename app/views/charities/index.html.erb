@@ -1,8 +1,26 @@
-<h1>All charities</h1>
+<div class="container-fluid">
+    <h1 class='text-center'>All charities</h1>
+    <div class='cards-container'>
+        <% @charities.each do |charity|%>
 
-<% @charities.each do |charity|%>
-<h1><%=charity.name %></h1>
-<h1><%=charity.content %></h1>
-<h1>Created by: <%=charity.user.email %></h1>
+        <div class="card text-center">
+            <div class="card-header">
+                <%=charity.name %>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Created by: <%=charity.user.email %></h5>
+                <p class="card-text"><%=charity.content %></p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+            <div class="card-footer text-muted">
+                <%=charity.created_at %>
+            </div>
+        </div>
+        <%end%>
+    </div>
 
-<%end%>
+
+
+
+
+</div>

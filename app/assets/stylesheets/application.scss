@@ -17,8 +17,51 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+@import url("https://fonts.googleapis.com/css2?family=Pattaya&display=swap");
+
 body {
+  background-color: #3778c2;
+  font-family: "Pattaya", sans-serif;
+}
+// Navbar
+.navbar-link {
+  background-color: #fff;
+  color: #3778c2;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 20px;
 }
 
-form {
+.logout-btn {
+  color: red;
+  background-color: aqua;
+}
+
+.my-hr {
+  width: 30%;
+  background-color: #5fb523;
+  height: 2px;
+  border: none;
+}
+
+.notice {
+  font-size: 20px;
+  font-style: italic;
+  color: #5fb523;
+}
+
+// Home
+.home {
+  color: #fff;
+}
+
+// cards
+
+.cards-container {
+  color: #434b54;
+  .card {
+    border: #5fb523 1px solid;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
 }

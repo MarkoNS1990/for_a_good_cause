@@ -1,24 +1,25 @@
-<ul class="nav">
+<ul class="nav flex-column">
     <%if !user_signed_in?%>
 
     <li class="nav-item">
-        <%= link_to "Login", user_session_path %>
+        <%= link_to "Login", user_session_path , class:'navbar-link' %>
     </li>
     <li class="nav-item">
-        <%= link_to "Signup", new_user_registration_path %>
+        <%= link_to "Signup", new_user_registration_path, class:'navbar-link' %>
     </li>
 
     <%else%>
-    <li class="nav-item">
-        <%= button_to "Logout", destroy_user_session_path , class:'btn btn-danger'%>
-    </li>
-    <li class="nav-item">
-        <%= link_to "Create a charity", new_charity_path %>
-    </li>
-    <li class="nav-item">
-        <%= link_to "All charities", charities_path %>
-    </li>
 
-    <%end%>
+    </li>
+    <li class="nav-item">
+        <%= link_to "Create a charity", new_charity_path , class:'btn btn-primary'%>
+    </li>
+    <li class="nav-item">
+        <%= link_to "All charities", charities_path , class:'btn btn-primary' %>
+    </li>
+    <li class="nav-item">
+        <%= button_to "logout", destroy_user_session_path,class:'btn btn-danger btn-block',  method: :delete  %>
+
+        <%end%>
 
 </ul>

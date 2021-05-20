@@ -1,9 +1,11 @@
-<h1>Welcome to For A Good Cause</h1>
-<p>In here you can create a charity of your choice, donate to one, or just show your support!</p>
+<div class="container text-center home mt-3">
+    <hr class='my-4 my-hr'>
+    <h1 class='display-2'>Welcome to <br>For A Good Cause</h1>
+    <hr class='my-4 my-hr'>
+    <p class='lead'>In here you can create a charity of your choice, donate to one, or just show your support!</p>
 
-<% if !current_user%>
-<p class='notice'>Please login or signup to continue</p>
-<%end%>
-
-<%= button_to "logout", destroy_user_session_path,class:'btn btn-danger',  method: :delete  %>
-<%= link_to "Create a charity", new_charity_path,class:'btn btn-primary'  %>
+    <% if !current_user%>
+    <p class='notice'>Start by logging in or signing up!</p>
+    <%end%>
+    <%= render 'shared/nav'%>
+</div>
