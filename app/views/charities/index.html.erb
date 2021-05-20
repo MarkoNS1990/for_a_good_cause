@@ -17,11 +17,11 @@
             </div>
             <div class="card-body">
                 <h5 class="card-title">Created by: <%=charity.user.email %></h5>
-                <p class="card-text"><%=charity.content %></p>
+                Content: <p class="card-text"><%=charity.content %></p>
                 <%= donate_btn(charity) %>
             </div>
             <div class="card-footer">
-                <%=charity.created_at %>
+                <%=charity.created_at.to_formatted_s(:long) %>
             </div>
         </div>
         <%end%>

@@ -24,9 +24,6 @@
         <%= link_to "My charities", "charities/#{current_user.id}" , class:'btn btn-primary' %>
     </li>
     <li class="nav-item">
-        <%= link_to "My donations", charities_path , class:'btn btn-primary' %>
-    </li>
-    <li class="nav-item">
         <%= button_to "logout", destroy_user_session_path,class:'btn btn-danger btn-block',  method: :delete  %>
 
         <%end%>

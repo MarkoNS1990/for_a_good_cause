@@ -6,13 +6,11 @@
         <h1 class='text-center'>All our registered users</h1>
     </div>
 
-    <ol>
+    <ul>
         <% @users.each do |user|%>
-        <li><%=user.email%><%= link_to "show charity logs", "users/#{user.id}}", class:'btn btn-info btn-sm' %>
+        <li class='fdx'><%=user.email%><%= link_to "show charity logs", "users/#{user.id}}", class:'btn btn-danger btn-sm' %>
         </li>
         <%end%>
-    </ol>
+    </ul>
 
 </div>
-
-<%= render 'shared/nav'%>

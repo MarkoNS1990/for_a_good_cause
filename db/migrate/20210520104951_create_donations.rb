@@ -6,7 +6,5 @@ class CreateDonations < ActiveRecord::Migration[6.1]
 
       t.timestamps
     end
-    add_foreign_key :donations, :users, column: :user_id
-    add_foreign_key :donations, :charities, column: :charity_id
   end
 end

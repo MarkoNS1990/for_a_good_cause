@@ -4,14 +4,21 @@
     <% end %>
     <h1 class='text-center'>List of My Charities </h1>
 </div>
+
 <%if @charities.count > 1 %>
-<h3>You have made <%=@charities.count%> charities</h3>
+<h3 class='text-center'>You have made <%=@charities.count%> charities</h3>
 <%elsif @charities.count == 1 %>
-<h3>You have made <%=@charities.count%> charity</h3>
+<h3 class='text-center'>You have made <%=@charities.count%> charity</h3>
 <%else%>
 <h3 class='text-light'>You have no charities so far! Go ahead and make one!</h3>
 <%end%>
-
-<%@charities.each do |char|%>
-<%=char.name%>
+<ul>
+    <%@charities.each do |char|%>
+    <li class='fdx'>
+        <%=char.name%>
+        <p>-</p>
+        <%=char.created_at.to_formatted_s(:long)%>
+    </li>
+</ul>
+<%= button_to "Create a charity", new_charity_path, class:'btn btn-success btn-block' %>
 <%end%>

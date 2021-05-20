@@ -2,12 +2,13 @@
     <%= link_to users_path do %>
     <i class="fas fa-chevron-circle-left"></i>
     <% end %>
-    <h1 class='text-center'>Charities made by: <br> <%=@user.email%></h1>
+    <h3 class='text-center'>Charities made by: <br> <%=@user.email%></h3>
 </div>
+<hr class='my-5'>
 
-<ol class='my_list'>
+<ul class='my_list'>
     <%@charities.each do |char|%>
-    <li class='my_list_item'><%=char.name%> created at: <%=char.created_at%></li>
+    <li class='fdx'>Charity with the name: "<%=char.name%>" was created at: <%=char.created_at.to_formatted_s(:long)%></li>
 
     <%end%>
-</ol>
+    </ol>
