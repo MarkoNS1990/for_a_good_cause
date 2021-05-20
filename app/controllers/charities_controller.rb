@@ -1,4 +1,5 @@
 class CharitiesController < ApplicationController
+    before_action :authenticate_user!
     def index
         @charities = Charity.all.order("created_at DESC")
         @user = current_user
