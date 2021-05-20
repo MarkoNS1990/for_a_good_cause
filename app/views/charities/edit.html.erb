@@ -1,0 +1,14 @@
+<div class="container-fluid">
+    <div class='heading'>
+        <%= link_to charities_path do %>
+        <i class="fas fa-chevron-circle-left"></i>
+        <% end %>
+        <h1 class='text-center'>Edit your charity </h1>
+    </div>
+
+    <%= simple_form_for @charity do |f| %>
+    <%= f.input :name , class:'form-control' %>
+    <%= f.input :content ,class:'form-control'%><br>
+    <%= f.submit 'Save' ,class:'btn btn-primary btn-block' %>
+    <% end %>
+</div>
