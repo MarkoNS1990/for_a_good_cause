@@ -28,6 +28,7 @@
                 <h5 class="card-title">Created by: <%=charity.user.email %></h5>
                 Content: <p class="card-text"><%=charity.content %></p>
                 <%= donate_btn(charity) %>
+                Total donations: $<%=charity.donations.count%>
             </div>
             <div class="card-footer">
                 <%=charity.created_at.to_formatted_s(:long) %>

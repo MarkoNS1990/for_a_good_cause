@@ -15,9 +15,9 @@
 <ul>
     <%@charities.each do |char|%>
     <li class='fdx'>
-        <%=char.name%>
-        <p>-</p>
-        <%=char.created_at.to_formatted_s(:long)%>
+        <p> <%=char.name%> | <%=char.created_at.to_formatted_s(:long)%></p>
+        <p>Recieved donations: $<%=char.donations.count%></p>
+
     </li>
 </ul>
 
