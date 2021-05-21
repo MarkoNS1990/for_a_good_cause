@@ -16,20 +16,22 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
 @import url("https://fonts.googleapis.com/css2?family=Pattaya&display=swap");
 
 body {
   background-color: #3778c2;
   font-family: "Pattaya", sans-serif;
 }
+
 ul {
   list-style-type: none;
   padding: 0;
 }
+
 a:hover {
   background-color: #3778c2 !important;
 }
+
 .fas:hover {
   background-color: #3778c2;
 }
@@ -74,7 +76,6 @@ a:hover {
 }
 
 // cards
-
 .heading {
   display: flex;
 
@@ -89,20 +90,23 @@ a:hover {
 
 .cards-container {
   color: #434b54;
+
   .card {
     border: #5fb523 3px solid;
     border-radius: 5px;
     margin-bottom: 10px;
     box-shadow: 5px 5px gray;
+
     .card-header {
       background-color: rgb(25, 102, 202);
       color: #fff;
-      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-        "Lucida Sans Unicode", Verdana, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
     }
+
     .card-body {
       background-color: #fff;
       padding: 10px 0;
+
       .card-title {
         text-decoration: underline;
         font-style: italic;
