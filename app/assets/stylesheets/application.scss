@@ -78,7 +78,6 @@ a:hover {
 // cards
 .heading {
   display: flex;
-
   align-items: center;
 
   .fas {
@@ -115,10 +114,11 @@ a:hover {
     }
   }
 }
+
 .donated {
   color: #5fb523;
   font-size: 12px;
-  font-family: arial;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .my_list {
