@@ -15,5 +15,4 @@ RSpec.describe Donation, type: :model do
       expect(Donation.reflect_on_association(:user).macro).to be :belongs_to
     end
   end
-
 end
