@@ -12,7 +12,7 @@
     <%else%>
     <h3 class='text-light'>You have no charities so far! Go ahead and make one!</h3>
     <%end%>
-    <p class='text-success lead text-right'>Total donations recieved: $<%=@user.donations.count%></p>
+    <p class='lead text-right'>Total donations recieved: $<%=@user.donations.count%></p>
 </div>
 <ul>
     <%@charities.each do |char|%>
