@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    @users = User.all.order('created_at ASC')
+    @users = User.with_charities_count.order('created_at ASC')
   end
 
   def home; end
