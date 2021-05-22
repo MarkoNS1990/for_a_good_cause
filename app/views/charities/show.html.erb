@@ -4,19 +4,21 @@
     <% end %>
     <h1 class='text-center'>List of My Charities </h1>
 </div>
-
-<%if @charities.count > 1 %>
-<h3 class='text-center'>You have made <%=@charities.count%> charities</h3>
-<%elsif @charities.count == 1 %>
-<h3 class='text-center'>You have made <%=@charities.count%> charity</h3>
-<%else%>
-<h3 class='text-light'>You have no charities so far! Go ahead and make one!</h3>
-<%end%>
+<div class='my-charities-heading'>
+    <%if @charities.count > 1 %>
+    <h3 class='text-center'>You have made <%=@charities.count%> charities</h3>
+    <%elsif @charities.count == 1 %>
+    <h3 class='text-center'>You have made <%=@charities.count%> charity</h3>
+    <%else%>
+    <h3 class='text-light'>You have no charities so far! Go ahead and make one!</h3>
+    <%end%>
+    <p class='text-success lead text-right'>Total donations recieved: $<%=@user.donations.count%></p>
+</div>
 <ul>
     <%@charities.each do |char|%>
     <li class='fdx'>
         <p> <%=char.name%> | <%=char.created_at.to_formatted_s(:long)%></p>
-        <p>Recieved donations: $<%=char.donations.count%></p>
+        <p>Donations: $<%=char.donations.count%></p>
 
     </li>
 </ul>

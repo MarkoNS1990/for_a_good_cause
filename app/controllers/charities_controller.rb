@@ -22,6 +22,7 @@ class CharitiesController < ApplicationController
 
   def show
     @charities = Charity.where(user_id: current_user.id)
+    @user = current_user
   end
 
   def destroy
