@@ -11,6 +11,10 @@ RSpec.describe User, type: :model do
       user = User.create(email: '123', password: '123456')
       expect(user.valid?).to be false
     end
+    it 'check a incorrect password length' do
+      user = User.create(email: '123', password: '12')
+      expect(user.valid?).to be false
+    end
     it 'check creation with the same email' do
       User.create(email: 'test@test.com', password: '123456')
       user2 = User.create(email: 'test@test.com', password: '123456')

@@ -25,10 +25,10 @@ gem 'devise'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
+gem 'hirb', '~> 0.7.3'
 gem 'jquery-rails'
 gem 'sassc-rails', '>= 2.1.0'
 gem 'simple_form', '~> 5.1'
-
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 

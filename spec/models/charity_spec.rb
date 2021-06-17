@@ -19,4 +19,17 @@ RSpec.describe Charity, type: :model do
   context 'active record associations' do
     it { should have_many(:donations) }
   end
+
+  context 'validations for charities' do
+    let(:user) { User.create!(email: 'test123@test', password: '123456') }
+
+    it 'check a valid input' do
+      charity = Charity.create!(name: 'test', content: 'testt', user_id: user.id)
+      expect(charity.valid?).to be true
+    end
+    it 'check invalid input ' do
+      charity = Charity.create(name: 't', content: 'fsdfd', user_id: user.id)
+      expect(charity.valid?).to be false
+    end
+  end
 end

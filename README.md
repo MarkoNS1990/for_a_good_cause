@@ -26,6 +26,12 @@ Rspec gem
 
 ### Setup
 
+Clone or download repository to your system.
+
+```
+$ cd for_a_good_cause
+```
+
 Instal gems with:
 
 ```

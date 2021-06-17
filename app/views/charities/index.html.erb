@@ -5,8 +5,10 @@
         <% end %>
         <h1 class='text-center'>All charities</h1>
     </div>
-    <h3 class='text-center'>In total there are <%=@charities.count%> charities</h3>
-
+    <div class='all-charities-heading'>
+        <h3 class='text-center'>In total there are <%=@charities.count%> charities</h3>
+        <%= link_to "Create charity", new_charity_path ,class:'btn btn-success btn-lg' %>
+    </div>
 
     <div class='cards-container'>
         <% @charities.each do |charity|%>
